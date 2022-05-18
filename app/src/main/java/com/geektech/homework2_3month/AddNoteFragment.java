@@ -57,7 +57,8 @@ public class AddNoteFragment extends Fragment {
 
     private void checkIsEdit() {
         if (getArguments() != null){
-            if (!requireArguments().getString("title").isEmpty() && !requireArguments().getString("description").isEmpty()){
+            if (!requireArguments().getString("title").isEmpty() && !requireArguments().
+                    getString("description").isEmpty()){
                 etTitle.setText(requireArguments().getString("title"));
                 etDescription.setText(requireArguments().getString("description"));
                 position = requireArguments().getInt("position");
@@ -72,7 +73,8 @@ public class AddNoteFragment extends Fragment {
                         bundle.putString("description", description);
                         bundle.putString("date", date);
                         bundle.putInt("position", position);
-                        getActivity().getSupportFragmentManager().setFragmentResult("getNote", bundle);
+                        getActivity().getSupportFragmentManager().
+                                setFragmentResult("getNote", bundle);
                         getActivity().getSupportFragmentManager().popBackStack();
                     }
                 });

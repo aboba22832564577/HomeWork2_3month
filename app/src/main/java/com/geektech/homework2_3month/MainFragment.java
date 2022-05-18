@@ -29,7 +29,6 @@ public class MainFragment extends Fragment {
 
 
     public MainFragment() {
-
     }
 
     @Override
